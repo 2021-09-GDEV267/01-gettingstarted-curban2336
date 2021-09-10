@@ -45,3 +45,17 @@ The following packages were added:
   com.unity.timeline@1.5.4
   com.unity.ugui@1.0.0
   com.unity.visualscripting@1.6.1
+
+=== Thu Sep  9 11:04:25 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.2d.sprite@1.0.0
+  com.unity.2d.tilemap@1.0.0
+  com.unity.cinemachine@2.6.3
+  com.unity.ext.nunit@1.0.6
+  com.unity.polybrush@1.0.2
+  com.unity.postprocessing@3.0.3
+  com.unity.probuilder@4.5.0
