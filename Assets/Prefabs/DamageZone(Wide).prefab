@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3225117770259279365}
   - component: {fileID: 7016082066000455141}
   - component: {fileID: 8776505112554937180}
-  - component: {fileID: 5528324939819799467}
+  - component: {fileID: 4915269905361229556}
   m_Layer: 0
-  m_Name: DamageZone
+  m_Name: DamageZone(Wide)
   m_TagString: DamageZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4744520090430142522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 2, y: 0.6, z: 2}
+  m_LocalScale: {x: 4, y: 0.6, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5528324939819799467
+--- !u!114 &4915269905361229556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,6 +122,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4744520090430142522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4601d107424af7a439d69f4bb7f9d8ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 19b4dbf9cb381e446a73fa26e9b80abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

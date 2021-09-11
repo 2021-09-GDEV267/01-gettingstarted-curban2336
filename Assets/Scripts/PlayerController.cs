@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI healthText;
     public GameObject winTextObject;
     public GameObject loseTextObject;
+    public GameObject player;
 
     private Rigidbody rb;
     private float movementX;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         SetHealthText();
         winTextObject.SetActive(false);
         loseTextObject.SetActive(false);
+        player.SetActive(true);
     }
 
     void OnMove(InputValue movementValue)
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         if (health == 0)
         {
             loseTextObject.SetActive(true);
+            player.SetActive(false);
         }
     }
 
