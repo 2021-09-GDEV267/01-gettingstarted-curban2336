@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI healthText;
     public GameObject winTextObject;
     public GameObject loseTextObject;
+    public GameObject warningTextObject;
     public GameObject player;
 
     private Rigidbody rb;
@@ -50,6 +51,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void SetWarningText()
+    {
+        warningTextObject.SetActive(true);
+    }
+
     void SetHealthText()
     {
         healthText.text = "Health: " + health.ToString();
@@ -83,6 +89,18 @@ public class PlayerController : MonoBehaviour
 
             SetHealthText();
         }
-        
+
+        if (other.gameObject.CompareTag("WarningText"))
+        {
+            SetWarningText();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("WarningText"))
+        {
+            warningTextObject.SetActive(false);
+        }
     }
 }
