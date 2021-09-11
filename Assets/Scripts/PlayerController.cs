@@ -8,21 +8,27 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
+    public TextMeshProUGUI healthText;
     public GameObject winTextObject;
-    
+    public GameObject loseTextObject;
+
     private Rigidbody rb;
     private float movementX;
     private float movementY;
     private int count;
+    private int health;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
+        health = 5;
 
         SetCountText();
+        SetHealthText();
         winTextObject.SetActive(false);
+        loseTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue)
@@ -42,6 +48,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void SetHealthText()
+    {
+        healthText.text = "Health: " + health.ToString();
+
+        if (health == 0)
+        {
+            loseTextObject.SetActive(true);
+        }
+    }
+
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
@@ -56,6 +72,13 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
 
             SetCountText();
+        }
+
+        if (other.gameObject.CompareTag("DamageZone"))
+        {
+            health = health - 1;
+
+            SetHealthText();
         }
         
     }
